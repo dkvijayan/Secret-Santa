@@ -52,9 +52,10 @@ public class Member {
 
    @Override
    public String toString() {
-      return "FamilyMember{" +
+      return "Member{" +
               "id='" + id + '\'' +
               ", name='" + name + '\'' +
+              ", secretGiftHistory=" + secretGiftHistory +
               '}';
    }
 }
