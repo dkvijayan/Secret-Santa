@@ -1,8 +1,6 @@
 package com.sanatasecret.model;
 
-import java.util.List;
-import java.util.NavigableMap;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * @author Vijayan on 9/16/21
@@ -14,7 +12,7 @@ public class Member {
 
    private String name;
 
-   private List<String> relationshipRoles; // Convert String into ENUM For Part 3
+   private List<MemberRelations> relationshipRoles; // Convert String into ENUM For Part 3
 
    private String familyId;
 
@@ -24,6 +22,7 @@ public class Member {
       this.id = id;
       this.name = name;
       this.secretGiftHistory = new TreeMap<>();
+      this.relationshipRoles = new LinkedList<>();
    }
 
    public String getId() {
@@ -50,11 +49,41 @@ public class Member {
       this.secretGiftHistory = secretGiftHistory;
    }
 
+   public List<MemberRelations> getRelationshipRoles() {
+      return relationshipRoles;
+   }
+
+   public void setRelationshipRoles(List<MemberRelations> relationshipRoles) {
+      this.relationshipRoles = relationshipRoles;
+   }
+
+   public String getFamilyId() {
+      return familyId;
+   }
+
+   public void setFamilyId(String familyId) {
+      this.familyId = familyId;
+   }
+
+   @Override
+   public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+      Member member = (Member) o;
+      return id.equals(member.id);
+   }
+
+   @Override
+   public int hashCode() {
+      return Objects.hash(id);
+   }
+
    @Override
    public String toString() {
       return "Member{" +
               "id='" + id + '\'' +
               ", name='" + name + '\'' +
+              ", relationshipRoles=" + relationshipRoles +
               ", secretGiftHistory=" + secretGiftHistory +
               '}';
    }
