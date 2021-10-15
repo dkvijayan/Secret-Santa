@@ -16,6 +16,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation "junit:junit:4.11"
+	implementation group: 'ma.glasnost.orika', name: 'orika-core', version: '1.5.4'
+	compileOnly 'org.projectlombok:lombok:1.18.16'
+	annotationProcessor 'org.projectlombok:lombok:1.18.16'
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+	implementation "io.springfox:springfox-boot-starter:3.0.0"
+	compileOnly "io.springfox:springfox-swagger-ui:3.0.0"
 }
 
 test {

@@ -37,7 +37,7 @@ public class SantaPartTwo {
             removeOldHistory(member, currentYear);
 
             // Check whether Already History Has same Member
-            if(member.getSecretGiftHistory().isEmpty()){
+            if(Objects.isNull(member.getSecretGiftHistory()) || member.getSecretGiftHistory().isEmpty()){
                 member.getSecretGiftHistory().put(currentYear, memberList.get(pairMemberIndex).getId());
                 familyPair.put(member, memberList.get(pairMemberIndex));
             }else{
@@ -54,7 +54,7 @@ public class SantaPartTwo {
      */
     private static void removeOldHistory(Member  member, int currentYear){
 
-        if(member.getSecretGiftHistory().isEmpty()){
+        if(Objects.isNull(member.getSecretGiftHistory()) || member.getSecretGiftHistory().isEmpty()){
             return ;
         }
 

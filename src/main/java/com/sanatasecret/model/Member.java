@@ -18,6 +18,8 @@ public class Member {
 
    private NavigableMap<Integer, String> secretGiftHistory; // Santa Picked History For Part 2
 
+   public Member(){}
+
    public Member(String id, String name) {
       this.id = id;
       this.name = name;

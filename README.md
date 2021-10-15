@@ -36,3 +36,15 @@ Running the Application(Alternative)
 Running JUNIT Test Case
 =========================
 * Path to src/test/<package>/<test-cases>
+
+Swagger UI
+=========================
+* http://localhost:8080/swagger-ui/#/
+
+
+Docker 
+=============================
+
+* Build : "docker build ."
+* Run : "docker run -it -p8080:8080 santa-secret"
+

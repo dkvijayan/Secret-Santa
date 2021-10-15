@@ -3,6 +3,7 @@ package com.sanatasecret.repository;
 import com.sanatasecret.model.Member;
 import com.sanatasecret.model.MemberRelations;
 import com.sanatasecret.model.Relation;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -12,6 +13,7 @@ import java.util.stream.Collectors;
  * @author  Vijayan
  */
 
+@Service
 public class MemberRelationRepositoryImpl implements  MemberRelationRepository{
 
     private List<Member> familyMembers;
